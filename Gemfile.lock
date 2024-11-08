@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cloudflare-ips (0.3.0)
+    cloudflare-ips (1.0.0)
       rails (>= 7.0.0)
 
 GEM
