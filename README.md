@@ -6,12 +6,14 @@
 [![Yard](https://img.shields.io/badge/docs-site-blue.svg)](https://cloudflare-ips.ksylvest.com)
 [![CircleCI](https://img.shields.io/circleci/build/github/ksylvest/cloudflare-ips)](https://circleci.com/gh/ksylvest/cloudflare-ips)
 
+CloudflareIPs assigns the proxy [IPv4](https://www.cloudflare.com/ips-v4/) and [IPv6](https://www.cloudflare.com/ips-v6/) Cloudflare IPs allowing `request.remote_ip` to return back the actual IP instead of a Cloudflare datacenter IP.
+
 ## Installation
 
+Configure the Cloudflare IPs gem for any environment needed:
+
 ```ruby
-group :production do
-  gem "cloudflare-ips"
-end
+gem "cloudflare-ips"
 ```
 
 ```bash
@@ -20,6 +22,8 @@ $ bundle
 
 ## Usage
 
+Use `request.remote_ip` instead of `request.ip` to properly retrieve IPs:
+
 ```ruby
-request.remote_ip # avoid request.ip
+request.remote_ip
 ```
